@@ -33,6 +33,10 @@ namespace EjemploAccesoBBDDMysqlCSharp
             if (resultado.Read())
             {
                 MessageBox.Show("Acceso Correcto", "USUARIO OK");
+                CenterToScreen();
+                this.Visible = false;
+                VentanaPrincipal v = new VentanaPrincipal();
+                v.Visible = true;
             }
             else
             {
