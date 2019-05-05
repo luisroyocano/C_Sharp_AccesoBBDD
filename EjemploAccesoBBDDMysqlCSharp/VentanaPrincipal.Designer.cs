@@ -29,23 +29,33 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.desplegableTitulos = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(147, 170);
+            this.label1.Location = new System.Drawing.Point(134, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(518, 55);
             this.label1.TabIndex = 0;
             this.label1.Text = "VENTANA PRINCIPAL";
+            // 
+            // desplegableTitulos
+            // 
+            this.desplegableTitulos.FormattingEnabled = true;
+            this.desplegableTitulos.Location = new System.Drawing.Point(12, 100);
+            this.desplegableTitulos.Name = "desplegableTitulos";
+            this.desplegableTitulos.Size = new System.Drawing.Size(259, 21);
+            this.desplegableTitulos.TabIndex = 1;
             // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.desplegableTitulos);
             this.Controls.Add(this.label1);
             this.Name = "VentanaPrincipal";
             this.Text = "VentanaPrincipal";
@@ -57,5 +67,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox desplegableTitulos;
     }
 }
