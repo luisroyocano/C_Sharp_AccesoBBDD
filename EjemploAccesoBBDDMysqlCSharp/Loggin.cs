@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace EjemploAccesoBBDDMysqlCSharp
 {
-    public partial class Form1 : Form
+    public partial class Loggin : Form
     {
-        public Form1()
+        public Loggin()
         {
             InitializeComponent();
         }

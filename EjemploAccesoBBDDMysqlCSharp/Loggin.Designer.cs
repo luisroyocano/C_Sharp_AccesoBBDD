@@ -1,6 +1,6 @@
 ﻿namespace EjemploAccesoBBDDMysqlCSharp
 {
-    partial class Form1
+    partial class Loggin
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loggin));
             this.botonLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cajaUsuario = new System.Windows.Forms.TextBox();
