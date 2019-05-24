@@ -103,11 +103,6 @@ namespace EjemploAccesoBBDDMysqlCSharp
             MySqlCommand comando = new MySqlCommand("INSERT INTO `alquiler` (`DNI_usuario`, `pelicula`) VALUES ('" + comboBox1.Text + "', '" + comboBox2.Text + "') ",
                 conexion);
             MySqlDataReader resultado = comando.ExecuteReader();
-            if (resultado.Read())
-            {
-                MessageBox.Show("Pelicula añadida");
-
-            }
             conexion.Close();
         }
 
@@ -117,12 +112,25 @@ namespace EjemploAccesoBBDDMysqlCSharp
             MySqlCommand comando = new MySqlCommand("DELETE FROM `alquiler` WHERE `DNI_usuario` = '" + comboBox1.Text + "' and `pelicula` = '" + comboBox2.Text + "' ",
                 conexion);
             MySqlDataReader resultado = comando.ExecuteReader();
+            conexion.Close();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             DarDeAltaUsuario v = new DarDeAltaUsuario();
             v.Visible = true;
+        }
+
+        private void DarDeBaja_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conexion = new ConexionBBDD().conecta();
+            MySqlCommand comando = new MySqlCommand("DELETE FROM `usuario` WHERE `usuario`.`DNI` = " + darBajaUsuario.Text + "; ",
+                conexion);
+            MySqlDataReader resultado = comando.ExecuteReader();
+            conexion.Close();
+            
+            
         }
     }
 }
